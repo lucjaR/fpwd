@@ -20,7 +20,7 @@ export class Article extends React.Component<PropsType> {
                 <Image
                     src={photo}
                 />
-                <ArticleContent>
+                <ArticleContent clicked={false}>
                     <h3>
                         Lorem Ipsum is simply dummy text of the printing and
                         typesetting industry.

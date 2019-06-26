@@ -3,7 +3,6 @@ import * as React from 'react';
 import {
     ArticleWrapper,
     ImageFV,
-    /* ArticleTitle,*/
     ArticleContent
 } from '../styledComponents/StyledComponents';
 
@@ -32,7 +31,7 @@ export class ArticleFullView extends React.Component<PropsType, StateType> {
                     onClick={this.handleClickImage}
                     clicked={this.state.imageClicked}
                 />
-                <ArticleContent>
+                <ArticleContent clicked={this.state.imageClicked}>
                     <h3>
                         Lorem Ipsum is simply dummy text of the printing and
                         typesetting industry.

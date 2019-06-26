@@ -8,9 +8,6 @@ import {
     MenuItem
 } from '../styledComponents/StyledComponents';
 
-
-const temp_img = require('../images/10.jpg');
-
 interface PropsType {
     homePage: boolean,
     onArticleClick: () => void
@@ -44,7 +41,6 @@ export class Content extends React.Component<PropsType, {}> {
                         <Article onClick={this.props.onArticleClick} />
                     </React.Fragment> :
                     <ArticleFullView />
-
                 }
             </ContentWrapper>
         );

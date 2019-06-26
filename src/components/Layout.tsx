@@ -26,7 +26,7 @@ export class Layout extends React.Component<PropsType, StateType> {
     render() {
         return (
             <LayoutMain>
-                <Menu homePage={this.state.homePage}/>
+                <Menu homePage={this.state.homePage} onClick={this.handleClickArticle}/>
                 <Content homePage={this.state.homePage} onArticleClick={this.handleClickArticle}/>
             </LayoutMain>
         )
@@ -34,8 +34,8 @@ export class Layout extends React.Component<PropsType, StateType> {
 
 
     handleClickArticle = () => {
-        this.setState({
-            homePage: false
+        this.setState((state) => {
+            return {homePage: !state.homePage}
         })
     }
 }
